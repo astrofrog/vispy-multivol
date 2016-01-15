@@ -37,6 +37,7 @@ from vispy.scene import visuals
 import vispy.visuals as impl_visuals
 from vispy.color import get_colormaps, BaseColormap
 from multivol import MultiVolume
+from multivol import get_translucent_cmap
 
 # Read volume
 vol1 = np.load(io.load_data_file('volume/stent.npz'))['arr_0']
@@ -53,8 +54,11 @@ view = canvas.central_widget.add_view()
 # Set whether we are emulating a 3D texture
 emulate_texture = False
 
+reds = get_translucent_cmap(1, 0, 0)
+blues = get_translucent_cmap(0, 0, 1)
+
 # Create the volume visuals, only one is visible
-volumes = [(vol1, None, 'grays'), (vol1[::-1,::-1,::-1], None, 'spring')]
+volumes = [(vol1, None, blues), (vol1[::-1,::-1,::-1], None, reds)]
 volume1 = MultiVolume(volumes, parent=view.scene, threshold=0.225,
                                emulate_texture=emulate_texture)
 volume1.transform = scene.STTransform(translate=(64, 64, 0))
