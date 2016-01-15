@@ -1,5 +1,5 @@
 # This file implements a MultiVolumeVisual class that can be used to show
-# multiple volumes simultaneously. It is derived form the original VolumeVisual
+# multiple volumes simultaneously. It is derived from the original VolumeVisual
 # class in vispy.visuals.volume, which is releaed under a BSD license included
 # here:
 #

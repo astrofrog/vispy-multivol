@@ -1,5 +1,5 @@
 # This file implements a fragment shader that can be used to visualize multiple
-# volumes simultaneously. It is derived form the original fragment shader in
+# volumes simultaneously. It is derived from the original fragment shader in
 # vispy.visuals.volume, which is releaed under a BSD license included here:
 #
 # ===========================================================================

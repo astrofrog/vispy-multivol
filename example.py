@@ -1,32 +1,39 @@
-# -*- coding: utf-8 -*-
-# -----------------------------------------------------------------------------
-# Copyright (c) 2015, Vispy Development Team. All Rights Reserved.
-# Distributed under the (new) BSD License. See LICENSE.txt for more info.
-# -----------------------------------------------------------------------------
-# vispy: gallery 2
+# This file is an example of using the multivol code, and is derived from an
+# original example in vispy which is releaed under a BSD license included here:
+#
+# ===========================================================================
+# Vispy is licensed under the terms of the (new) BSD license:
+#
+# Copyright (c) 2015, authors of Vispy
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# * Neither the name of Vispy Development Team nor the names of its
+#   contributors may be used to endorse or promote products
+#   derived from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# ===========================================================================
+#
+# This modified version is released under the BSD license given in the LICENSE
+# file in this repository.
 
-"""
-Example volume rendering
-
-** 5 - Subset highlight for 3D scatter plot 
-
-Controls:
-
-* 1  - toggle camera between first person (fly), regular 3D (turntable) and
-       arcball
-* 2  - toggle between volume rendering methods
-* 3  - toggle between stent-CT / brain-MRI image
-* 4  - toggle between colormaps
-* 0  - reset cameras
-* [] - decrease/increase isosurface threshold
-
-With fly camera:
-
-* WASD or arrow keys - move around
-* SPACE - brake
-* FC - move up-down
-* IJKL or mouse - look around
-"""
 
 from itertools import cycle
 
@@ -71,13 +78,6 @@ view.camera = cam2  # Select turntable at first
 
 canvas.update()
 
-# create colormaps that work well for translucent and additive volume rendering
-
-
-# for testing performance
-# @canvas.connect
-# def on_draw(ev):
-# canvas.update()
 
 if __name__ == '__main__':
     print(__doc__)
