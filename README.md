@@ -24,3 +24,5 @@ and
 ```
 python astrocube.py
 ```
+
+![screenshot](screenshot.png)
