@@ -45,7 +45,7 @@ from vispy.scene.visuals import create_visual_node
 
 import numpy as np
 
-from .shaders import get_shaders
+from .multi_volume_shaders import get_shaders
 from .callback_list import CallbackList
 
 

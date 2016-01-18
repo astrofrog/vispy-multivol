@@ -49,3 +49,29 @@ ideal.
 
 ### Approach 2 - RGBAVolumeVisual
 
+This implements a ``RGBAVolumeVisual`` and a ``RGBAVolume`` class for
+[VisPy](http://www.vispy.org) which allows a cube with arbitrary colors in each
+pixel to be shown. This in turn can then be used to show multiple volumes,
+since we can pre-compute the full final RGBA cube in Python before passing it
+to VisPy.
+
+This works by simply setting ``u_volumetex`` to an actual 4-d RGBA cube instead
+of a 3-d array, and then using these values without mapping with a colormap.
+
+You can try the two examples in the repository by running:
+
+```
+python medical_rgba.py
+```
+
+and
+
+```
+python astrocube_rgba.py
+```
+
+**Pros:** could actually be implemented in VisPy with minimal effort (a few
+lines) on top of the existing Volume.
+
+**Cons:** combining the volumes has to be done in Python, and may therefore be
+slower.
